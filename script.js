@@ -72,3 +72,18 @@ function generateQuote() {
 
 // Appel initial pour afficher une citation et une couleur de fond
 generateQuote();
+
+function updateDateTime() {
+    let dateTimeContainer = document.getElementById("datetime");
+    function updateClock() {
+        var currentDate = new Date();
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        var formattedDate = currentDate.toLocaleDateString('fr-FR', options);
+        dateTimeContainer.textContent = "Date et heure actuelles : " + formattedDate;
+    }
+    // Mettre à jour l'horloge chaque seconde
+    setInterval(updateClock, 1000);
+}
+
+// Mettre à jour la date et l'heure au chargement de la page
+window.onload = updateDateTime;

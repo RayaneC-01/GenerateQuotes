@@ -59,3 +59,80 @@ main {
 #new-quote-btn:hover {
   background-color: #0056b3;
 }
+
+/* Ajout de l'animation pour le changement de citation */
+#quote-text {
+  font-size: 24px;
+  color: #333;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Ajout de l'effet de survol sur le bouton */
+#new-quote-btn {
+  /* Styles précédents */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#new-quote-btn:hover {
+  /* Styles précédents */
+  transform: scale(1.1);
+}
+
+/* Animation pour le changement de fond */
+body {
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Styles spécifiques pour les appareils mobiles */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  #quote-text {
+    font-size: 18px;
+  }
+  #author {
+    font-size: 14px;
+  }
+  #new-quote-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* Styles spécifiques pour les tablettes */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+  }
+  #quote-text {
+    font-size: 24px;
+  }
+  #author {
+    font-size: 18px;
+  }
+  #new-quote-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+/* Styles spécifiques pour les écrans larges (desktop) */
+@media screen and (min-width: 1025px) {
+  h1 {
+    font-size: 48px;
+  }
+  #quote-text {
+    font-size: 32px;
+  }
+  #author {
+    font-size: 24px;
+  }
+  #new-quote-btn {
+    font-size: 18px;
+    padding: 14px 28px;
+  }
+}
